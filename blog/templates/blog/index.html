@@ -61,7 +61,7 @@
         <h2 class="page-title">News</h2>
         
         <p>{{ article.title }}</p>
-        <p>{{ article.pub_date }}</p>
+        <p>{{ article.pub_date|date:"Y/m/d"}}</p> 
         <p>{{ article.text }}</p>
         <img src="{{ article.image.url }}" alt="画像">
        
