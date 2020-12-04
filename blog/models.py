@@ -9,5 +9,8 @@ class Article(models.Model):
   text = models.TextField('本文')
   pub_date = models.DateTimeField('作成日', default=timezone.now)
 
+  class Meta:
+    ordering = ('-pub_date',)
+
   def __str__(self):
     return self.title
