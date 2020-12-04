@@ -1,0 +1,542 @@
+@charset "UTF-8";
+
+/*   共通のスタイル  ------------------------- */
+html {
+  font-size: 100%;
+}
+
+/* フッターの固定 */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Noto Sans JP', sans-serif;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.logo {
+  position: fixed;
+  width: 80px;
+  margin: 10px;
+}
+
+.sns-logo {
+  width: 50px;
+  height: 50px;
+}
+
+#page-header {
+  display: flex;
+}
+
+
+.page-title {
+  text-align: center;
+  width: 100%;
+  margin-top: 5% ;
+  margin-bottom: 3.75%;
+  font-size: 3em;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #e1c0b6;
+  border-bottom: double ;
+  font-weight: lighter;
+}
+
+main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  width: 80%;
+  bottom: 0px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-top: double #e1c0b6;
+  padding: 20px 0;
+}
+
+
+
+
+/* ハンバーガーメニュー -------------------------*/
+.nav {
+  display: block;
+  position: fixed;
+  padding-top: 25px;
+  top: 0px;
+  right: -300px;
+  bottom: 0px;
+  width: 300px;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.5s;
+  z-index: 3;
+  opacity: 0.5;
+}
+
+
+
+.open .nav {
+  right: 0;
+  opacity: 0.8;
+  padding: 25px;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0px;
+  border-bottom: 1px solid #e1c0b6 ;
+}
+.nav-item a:nth-child(1) {
+  font-size: 20px;
+  margin-top: 40px;
+  color: #333;
+  transition-duration: 1.5s;
+}
+
+.nav-link {
+  font-size: 20px;
+  margin-top: 22.5px;
+  color: #333;
+  transition-duration: 1.5s;
+}
+
+.nav-link:hover{
+  background-color: #e1c0b6;
+}
+
+.sns-item {
+  position: relative;
+  margin-top: 5%;
+}
+
+.sns-logo {
+  margin: 0 12.5px;
+}
+
+#mask{
+  transition: all 0.9s;
+}
+
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.7;
+  z-index: 2;
+  cursor: pointer;
+
+}
+
+
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all .8s;
+  cursor: pointer;
+  z-index: 4;
+
+}
+
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .8s;
+}
+
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+
+.open .toggle_btn span {
+  background-color: #333;
+}
+
+.open .toggle_btn span:nth-child(1){
+  transform: translateY(10px) rotate(-315deg);
+}
+
+.open .toggle_btn span:nth-child(2){
+  opacity: 0;
+}
+
+.open .toggle_btn span:nth-child(3){
+  transform: translateY(-10px) rotate(315deg);
+}
+
+
+
+
+
+/*   Homeのスタイル  ------------------------- */
+#home .mainImg {
+  width: 100%;
+}
+.centering {
+  text-align: center;
+}
+#mainImg {
+  width: 80%;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  object-position: 50% 100%;
+}
+
+.fading {
+  position: relative;
+  width: 80%;
+  height: 700px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.fading .imgfade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  animation: fade-in-out 20s infinite;
+}
+
+.fading .src1 {
+  background-position: 50% 80%;
+  background-size: cover;
+  background-image: url("../images/Lulu1.jpg");
+}
+
+.fading .src2 {
+  background-size: cover;
+  background-image: url("../images/Lulu2.jpg");
+  animation-delay: 4s;
+}
+
+.fading .src3 {
+  background-size: cover;
+  background-image: url("../images/Lulu3.jpg");
+  animation-delay: 8s;
+}
+
+.fading .src4 {
+  background-size: cover;
+  background-image: url("../images/Lulu4.jpg");
+  animation-delay: 12s;
+}
+
+.fading .src5 {
+  background-size: cover;
+  background-image: url("../images/Lulu5.jpg");
+  animation-delay: 16s;
+}
+
+@keyframes fade-in-out {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  20% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.main-title {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 5% ;
+  margin-bottom: 3.75%;
+  font-family: 'Mrs Saint Delafield', cursive;
+  color: #e1c0b6;
+  border-bottom: double ;
+  font-weight: lighter;
+}
+
+
+
+/* .insta {
+  margin: 0 auto;
+  max-width: 400px;
+} */
+
+/*   Menuのスタイル  ------------------------- */
+
+#menu main dl {
+  display: flex;
+}
+
+#menu main dt {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 10px;
+  font-weight: normal;
+}
+
+#menu main dt::after {
+  border-top: 1px dashed #e1c0b6;
+  opacity: 0.375;
+  content: "";
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+#menu main dd {
+  width: 20%;
+  margin: auto;
+  padding: 10px 10px;
+}
+
+
+
+#menu main h3 {
+  display: flex;
+  align-items: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 10px 0;
+}
+
+#menu main h3::after {
+  border-top: 1px solid #e1c0b6;
+  content: "";
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+#menu main {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.menu-item {
+  width: 47.5%;
+  margin: 0.5% auto;
+
+}
+
+#menu main p {
+  color: #e1c0b6;
+}
+
+
+/*   Accessのスタイル  ------------------------- */
+#access {
+  background-color: #fff;
+}
+
+
+
+#access .wrapper {
+  display: flex;
+  padding-top: 50px;
+}
+
+
+#access .info {
+  width: 50%;
+}
+
+#access .info h2 {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 3rem;
+  font-weight: lighter;
+  border-bottom: 2px solid #e1c0b6;
+  padding-bottom: 5px;
+}
+
+#access .info a {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#access .info a:hover{
+  color: #e1c0b6;
+}
+
+#access .info-img {
+  text-align: center;
+  width: 45%;
+  margin: auto;
+  padding-top: 2.5%;
+}
+
+#access .info dl {
+  display: flex;
+
+}
+
+#access .info dt {
+  width: 35%;
+  padding: 20px;
+  border-bottom: 1px solid #e1c0b6;
+
+}
+
+#access .info dd {
+  padding: 20px;
+  margin: 0;
+  width: 65%;
+  border-bottom: 1px solid #e1c0b6;
+}
+
+#access iframe {
+  width: 100%;
+  margin: 20px 0;
+}
+
+
+/* モバイル用---------------------------------------------------*/
+@media (max-width: 960px) {
+  /*   共通のスタイル  ------------------------- */
+  #page-header {
+    position: fixed;
+    top: 0px;
+    background: #fff;
+    width: 100%;
+    height: 55px;
+  }
+
+  .logo {
+    width: 55px;
+    height: 35px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    margin-top: 65px;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .toggle_btn {
+    top: 12.5px;
+    right: 12.5px;
+  }
+  .nav {
+    right: -200px;
+    width: 200px;
+    padding: 5px;
+  }
+  .open .nav {
+    right: 0;
+    opacity: 0.8;
+    padding: 5px;
+  }
+
+  main {
+    width: 90%;
+
+  }
+
+  /* home ----------------------------- */
+  .main-title {
+    font-size: 2.5rem;
+    margin-top: 65px;
+    margin-bottom: 5%;
+  }
+
+  .fading {
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+  }
+
+  .fading .src1 {
+    background-image: url("../images/Lulu1sp.jpg");
+  }
+  
+  .fading .src2 {
+    background-image: url("../images/Lulu2sp.jpg");
+  }
+  
+  .fading .src3 {
+    background-image: url("../images/Lulu3sp.jpg");
+  }
+  
+  .fading .src4 {
+    background-image: url("../images/Lulu4sp.jpg");
+  }
+  
+  .fading .src5 {
+    background-image: url("../images/Lulu5sp.jpg");
+  }
+  
+
+  /* menu ----------------------------- */
+  #menu main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-item {
+    width: 100%;
+  }
+
+
+  /* Access---------------------------- */
+  #access .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+
+  #access .info {
+    width: 95%;
+    margin: auto;
+  }
+
+  #access .info h2 {
+    font-size: 1.5rem;
+  }
+
+  #access .info-img {
+    text-align: center;
+    width: 95%;
+  }
+
+  #access iframe {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+  }
+  /* LINE ----------------------------- */
+  .LINE {
+    margin-top: 65px;
+  }
+  /* フッター ------------------------- */
+  footer {
+    width: 90%;
+  }
+}

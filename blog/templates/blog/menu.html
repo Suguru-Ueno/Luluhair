@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <!-- レスポンシブの設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lulu hair Menu</title>
+    <!--  CSS  -->  
+    <!-- デフォルトcssをリセット -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- Googleフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- 独自のcss -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="menu">
+
+      <header id="page-header"><!-- ここに .open を追加する -->
+        <h1>
+          <a href="index.html"><img class="logo" src="images/LuluHAIR.jpg" alt="logo"></a>
+        </h1>
+        
+        <ul class="nav"> 
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="#!">News</a></li>
+          <li class="nav-item"><a class="nav-link " href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link " href="access_SNS.html">Access</a></li>
+          <li class="nav-item"><a class="nav-link " href="https://reserva.be/lulu_hair">Web予約</a></li>
+          <li class="sns-item"><a class="sns-link " href="LINE.html"><img class="sns-logo" src="images/LINE_SOCIAL_Basic.jpg" alt="LINE"></a><a class="sns-link " href="https://www.instagram.com/lu_lu020201/?hl=ja"><img class="sns-logo" src="images/Instagram_AppIcon.png" alt="Instagram"></a></li>
+        </ul>
+        
+        
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+        <div id="mask"></div>
+      </header>
+      <main>
+        <h1 class = "page-title" >Menu & Price</h1>
+        <div class="menu-item">
+          <h3>cut</h3>
+          <p>※ シャンプー・ブロー込み</p>
+          <dl>
+            <dt>一般</dt>
+            <dd>¥4,000</dd>
+          </dl>
+          <dl>
+            <dt>学生</dt>
+            <dd>¥3,700</dd>
+          </dl>
+          <dl>
+            <dt>高校生</dt>
+            <dd>¥3,000</dd>
+          </dl>
+          <dl>
+            <dt>中学生</dt>
+            <dd>¥2,500</dd>
+          </dl>
+          <dl>
+            <dt>小学生以下</dt>
+            <dd>¥2,000</dd>
+          </dl>
+        </div>
+        <div class="menu-item">
+          <h3>color</h3>
+          <p>※ シャンプー・ブロー込み</p>
+          <dl>
+            <dt>カラー</dt>
+            <dd>¥6,500</dd>
+          </dl>
+          <dl>
+            <dt>ハイライトカラー</dt>
+            <dd>¥3,500</dd>
+          </dl><dl>
+            <dt>ブリーチカラー</dt>
+            <dd>¥3,500</dd>
+          </dl>
+          <dl>
+            <dt>リタッチカラー</dt>
+            <dd>¥5,500</dd>
+          </dl>
+          <dl>
+            <dt>ヘナカラー</dt>
+            <dd>¥8,000</dd>
+          </dl>
+        </div>
+        <div class="menu-item">
+          <h3>perm</h3>
+          <p>※ Cut・シャンプー・ブロー込み</p>
+          <dl>
+            <dt>パーマ</dt>
+            <dd>¥9,500</dd>
+          </dl><dl>
+            <dt>縮毛矯正パーマ</dt>
+            <dd>¥13,500</dd>
+          </dl>
+        </div>
+        <div class="menu-item">
+          <h3>treatment・spa</h3>
+          <dl>
+            <dt>コネクトトリートメント</dt>
+            <dd>¥2,500</dd>
+          </dl><dl>
+            <dt>コネクトトリートメント<br>( 5ステップコース )</dt>
+            <dd>¥6,000</dd>
+          </dl>
+          <dl>
+            <dt>炭酸ヘッドスパ( クイック )</dt>
+            <dd>¥1,700</dd>
+          </dl>
+          <dl>
+            <dt>炭酸ヘッドスパ( ロング )</dt>
+            <dd>¥2,700</dd>
+          </dl>
+        </div>
+        </main>
+        
+    </div>
+      
+      <footer>
+        <p><small>&copy; 2020 Lulu hair</small></p>
+      </footer>
+      <script src="scripts/jquery-3.5.1.min.js"></script>
+      <script src="scripts/script.js"></script>
+  </body>
+</html>
