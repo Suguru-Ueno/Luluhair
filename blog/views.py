@@ -8,3 +8,13 @@ def index(request):
     'articles':articles,
   }
   return render(request, 'blog/index.html', words)
+
+def menu(request):
+  return render(request, 'blog/menu.html',)
+
+def access(request):
+  return render(request, 'blog/access_SNS.html',)
+
+def line(request):
+  return render(request, 'blog/LINE.html',)
+
