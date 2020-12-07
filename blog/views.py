@@ -18,3 +18,11 @@ def access(request):
 def line(request):
   return render(request, 'blog/LINE.html',)
 
+def blog(request):
+  articles = Article.objects.all()
+  words = {
+    'msg':'確認の表示',
+    'articles':articles,
+  }
+  return render(request, 'blog/blog.html', words)
+
